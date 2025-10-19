@@ -1,0 +1,3 @@
+apiVersion: v2
+name: ArgoCD-Helm
+description: ArgoCD-Helm chart for Kubernetes
