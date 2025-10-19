@@ -7,6 +7,6 @@ deployment:
 
 service:
   type: LoadBalancer
-  port: 5001
+  port: 80
   targetport: 5001
   nodePort: 31001
