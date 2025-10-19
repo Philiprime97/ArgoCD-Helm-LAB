@@ -14,7 +14,7 @@ spec:
         app: {{ .Release.Name }}
     spec:
       containers:
-        - image: {{ .Values.deployment.imagename }}:{{ .Values.deployment.imagetag }}
-          name: {{ .Release.Name }}
+        - name: {{ .Release.Name }}
+          image: {{ .Values.deployment.imagename }}:{{ .Values.deployment.imagetag }}
           ports:
             - containerPort: {{ .Values.service.port }}
