@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: { .Release.Name }}
+  name: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.deployment.replicaset }}
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: { .Release.Name }}
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: { .Release.Name }}
+        app: {{ .Release.Name }}
     spec:
       containers:
         - image: {{ .Values.deployment.imagename }}:{{ .Values.deployment.imagetag }}
-          name: { .Release.Name }}
+          name: {{ .Release.Name }}
           ports:
             - containerPort: {{ .Values.service.port }}
