@@ -17,4 +17,4 @@ spec:
         - image: {{ .Values.deployment.imagename }}:{{ .Values.deployment.imagetag }}
           name: { .Release.Name }}
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.service.port }}
